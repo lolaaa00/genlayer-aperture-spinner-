@@ -1,0 +1,16 @@
+.genlayer-aperture-spinner {
+  --aperture-size: 24px;
+  --aperture-duration: 1.34s;
+  width: var(--aperture-size);
+  height: var(--aperture-size);
+  display: inline-block;
+  overflow: visible;
+}
+.genlayer-aperture-spinner .ap-piece { fill: var(--aperture-fill,currentColor); transform-box:view-box; will-change:transform; }
+.genlayer-aperture-spinner .ap-left { transform-origin:176px 291px; animation:aperture-left var(--aperture-duration) cubic-bezier(.65,0,.35,1) infinite; }
+.genlayer-aperture-spinner .ap-right { transform-origin:225px 291px; animation:aperture-right var(--aperture-duration) cubic-bezier(.65,0,.35,1) infinite; }
+.genlayer-aperture-spinner .ap-core { transform-origin:200.33px 247.84px; animation:aperture-core var(--aperture-duration) cubic-bezier(.65,0,.35,1) infinite; }
+@keyframes aperture-left{0%,100%{transform:rotate(0deg) translate(0,0)}35%{transform:rotate(4.8deg) translate(1px,-1px)}52%{transform:rotate(5.4deg) translate(1.5px,-1.5px)}66%{transform:rotate(4.8deg) translate(1px,-1px)}}
+@keyframes aperture-right{0%,100%{transform:rotate(0deg) translate(0,0)}35%{transform:rotate(-4.8deg) translate(-1px,-1px)}52%{transform:rotate(-5.4deg) translate(-1.5px,-1.5px)}66%{transform:rotate(-4.8deg) translate(-1px,-1px)}}
+@keyframes aperture-core{0%,100%{transform:scale(1) rotate(0deg)}35%{transform:scale(.92) rotate(3deg)}52%{transform:scale(.89) rotate(0deg)}66%{transform:scale(.92) rotate(-3deg)}}
+@media(prefers-reduced-motion:reduce){.genlayer-aperture-spinner .ap-piece{animation:none!important;transform:none!important}}

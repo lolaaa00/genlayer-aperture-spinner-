@@ -1,0 +1,16 @@
+README.md
+START_HERE.md
+DESIGN.md
+DEPLOYMENT.md
+SUBMISSION.md
+LICENSE
+.gitignore
+package.json
+index.html
+src/aperture-spinner.svg
+src/aperture-spinner.css
+src/ApertureSpinner.tsx
+docs/index.html
+docs/loading.html
+docs/aperture-spinner.svg
+tests/validate.mjs

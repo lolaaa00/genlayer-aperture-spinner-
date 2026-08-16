@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 400 400"
+     role="img"
+     aria-label="GenLayer Aperture loading spinner"
+     class="genlayer-aperture">
+  <defs>
+    <linearGradient id="aperture-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  <style>
+    .genlayer-aperture { overflow: visible; }
+    .ap-piece { fill: url(#aperture-gradient); transform-box: view-box; will-change: transform; }
+    .ap-left { transform-origin: 176px 291px; animation: ap-left-lock var(--aperture-duration, 1.34s) cubic-bezier(.65,0,.35,1) infinite; }
+    .ap-right { transform-origin: 225px 291px; animation: ap-right-lock var(--aperture-duration, 1.34s) cubic-bezier(.65,0,.35,1) infinite; }
+    .ap-core { transform-origin: 200.33px 247.84px; animation: ap-core-lock var(--aperture-duration, 1.34s) cubic-bezier(.65,0,.35,1) infinite; }
+    @keyframes ap-left-lock {
+      0%,100% { transform: rotate(0deg) translate(0,0); }
+      35% { transform: rotate(4.8deg) translate(1px,-1px); }
+      52% { transform: rotate(5.4deg) translate(1.5px,-1.5px); }
+      66% { transform: rotate(4.8deg) translate(1px,-1px); }
+    }
+    @keyframes ap-right-lock {
+      0%,100% { transform: rotate(0deg) translate(0,0); }
+      35% { transform: rotate(-4.8deg) translate(-1px,-1px); }
+      52% { transform: rotate(-5.4deg) translate(-1.5px,-1.5px); }
+      66% { transform: rotate(-4.8deg) translate(-1px,-1px); }
+    }
+    @keyframes ap-core-lock {
+      0%,100% { transform: scale(1) rotate(0deg); }
+      35% { transform: scale(.92) rotate(3deg); }
+      52% { transform: scale(.89) rotate(0deg); }
+      66% { transform: scale(.92) rotate(-3deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { .ap-piece { animation:none!important; transform:none!important; } }
+  </style>
+  <polygon class="ap-piece ap-left" points="183,33 20,372 179,310 122,279 183,152" />
+  <polygon class="ap-piece ap-right" points="218,33 218,151 280,281 222,310 382,373" />
+  <polygon class="ap-piece ap-core" points="200,195 166,265 200,283 235,266" />
+</svg>
